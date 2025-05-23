@@ -1,0 +1,48 @@
+/* Estilo básico para responsividade e desempenho */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #6dd5ed, #2193b0);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background 0.5s ease;
+}
+
+input, button {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #fff;
+  color: #2193b0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e0f7fa;
+}
+
+#mensagem {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  input, button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

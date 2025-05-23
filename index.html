@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Seguro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Digite sua senha:</h1>
+  <input type="password" id="senha" placeholder="Sua senha">
+  <button onclick="verificarSenha()">Verificar</button>
+  <p id="mensagem"></p>
+
+  <script>
+    alert("Bem-vindo(a) ao meu site seguro!");
+
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      const mensagem = document.getElementById("mensagem");
+      const temOitoOuMais = senha.length >= 8;
+      const temNumero = /\d/.test(senha);
+      const temMaiuscula = /[A-Z]/.test(senha);
+
+      if (temOitoOuMais && temNumero && temMaiuscula) {
+        mensagem.textContent = "Senha forte!";
+        mensagem.style.color = "green";
+      } else {
+        mensagem.textContent = "Senha fraca! Tente outra.";
+        mensagem.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
